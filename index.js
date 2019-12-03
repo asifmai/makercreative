@@ -184,8 +184,8 @@ const launchPage = (browser) => new Promise(async (resolve, reject) => {
     //   height: 768
     // });
 
-    const blockedResources = ['image'];
-    // blockedResources = [];
+    // const blockedResources = ['image'];
+    const blockedResources = [];
     // Set Request Interception to avoid receiving images, fonts and stylesheets for fast speed
     await page.setRequestInterception(true);
     page.on('request', (req) => {
