@@ -118,6 +118,7 @@ const fetchData = (url) => new Promise(async (resolve, reject) => {
       }
 
       // Download Image
+      await page.screenshot({path: 'screen.png'});
       await page.waitForSelector('body > div:nth-child(11) > div > div > div > div > div > img:first-of-type');
       const imageUrl = await page.$eval(
           'body > div:nth-child(11) > div > div > div > div > div > img:first-of-type',
