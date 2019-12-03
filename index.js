@@ -180,10 +180,10 @@ const launchPage = (browser) => new Promise(async (resolve, reject) => {
     });
 
     // Set Page view port
-    // await page.setViewport({
-    //   width: 1366,
-    //   height: 768
-    // });
+    await page.setViewport({
+      width: 1366,
+      height: 768
+    });
 
     // const blockedResources = ['image'];
     const blockedResources = [];
@@ -230,7 +230,7 @@ const launchBrowser = () => new Promise(async (resolve, reject) => {
         '--ignore-certifcate-errors-spki-list',
         // '--user-data-dir=c:\\users\\asifm\\appdata\\local\\google\\chrome\\user data\\default',
         // '--start-fullscreen',        //Starts the browser in full screen mode
-        // '--window-size=1366,768',
+        '--window-size=1366,768',
         // '--user-data-dir'                  // This will use existing chrome open browser or open a new browser and use local setting, cookies of the user
         '--no-sandbox',                  // To run on linux
         // '--proxy-server=143.255.52.90:8080',    //To use a sock5 proxy
